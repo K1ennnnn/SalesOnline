@@ -1,0 +1,28 @@
+B1 : Create Project / Run Project
+composer create-project laravel/laravel Name_Project
+
+cd Name_Project
+php artisan serve
+
+B2 : Create Folder Fronend / Admin BackEnd trong views and public
+
+B3 : Create masterpage
+
+B4 : Create MyDatabase
+Config file .env
+
+B5 : Create migrations, seed data
+php artisan migrate
+php artisan db:seed
+
+B6: Create Models and Relationships
+php artisan make:model Name_Model
+
+B7 : Create Repository Cho Product
+B8 : Create Service Cho Product
+
+Fronend : 
+
+B1 : Hien thi Thong Tin San Pham
+
+Tao Controller : php artisan make:controller Name_Controller
