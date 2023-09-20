@@ -192,37 +192,21 @@
                             <div class="pd-color">
                                 <h6>Color</h6>
                                 <div class="pd-color-choose">
+                                    @foreach(array_unique(array_column($product->productDetails->toArray(),'color')) as $productColor)
                                     <div class="cc-item">
-                                        <input type="radio" name="" id="cc-black">
-                                        <label for="cc-black" class="cc-black"></label>
+                                        <input type="radio" name="" id="cc-{{$productColor}}">
+                                        <label for="cc-{{$productColor}}" class="cc-{{$productColor}}"></label>
                                     </div>
-                                    <div class="cc-item">
-                                        <input type="radio" name="" id="cc-yellow">
-                                        <label for="cc-yellow" class="cc-yellow"></label>
-                                    </div>
-                                    <div class="cc-item">
-                                        <input type="radio" name="" id="cc-violet">
-                                        <label for="cc-violet" class="cc-violet"></label>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="pd-size-choose">
+                                @foreach(array_unique(array_column($product->productDetails->toArray(),'size')) as $productSize)
                                 <div class="sc-item">
-                                    <input type="radio" id="sm-size">
-                                    <label for="sm-size">s</label>
+                                    <input type="radio" id="sm-{{$productSize}}">
+                                    <label for="sm-{{$productSize}}">{{$productSize}}</label>
                                 </div>
-                                <div class="sc-item">
-                                    <input type="radio" id="md-size">
-                                    <label for="md-size">m</label>
-                                </div>
-                                <div class="sc-item">
-                                    <input type="radio" id="lg-size">
-                                    <label for="lg-size">l</label>
-                                </div>
-                                <div class="sc-item">
-                                    <input type="radio" id="xl-size">
-                                    <label for="xl-size">xs</label>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="quantity">
                                 <div class="quantity">
@@ -233,11 +217,11 @@
                                 </div>
                             </div>
                             <ul class="pd-tags">
-                                <li><span>CATEGORIES</span> : More Accessories. Wallets & Cases</li>
-                                <li><span>TAGS</span> : Clothing, T-shirt, Woman</li>
+                                <li><span>CATEGORIES</span> : {{$product->productCategory->name}}</li>
+                                <li><span>TAGS</span> : {{$product->tag}}</li>
                             </ul>
                             <div class="pd-share">
-                                <div class="p-code">Sku : 00012</div>
+                                <div class="p-code">Sku : {{$product->sku}}</div>
                                 <div class="pd-social">
                                     <a href="#"><i class="ti-facebook"></i></a>
                                     <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -259,33 +243,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
                                     <div class="product-content">
-                                        <div class="row">
-                                            <div class="col-lg-7">
-                                                <h5>Introduction</h5>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                                                    quia,
-                                                    officiis aspernatur ipsum pariatur repellat expedita beatae
-                                                    nobis
-                                                    cum! Libero mollitia blanditiis iste inventore voluptate
-                                                    quibusdam
-                                                    magni obcaecati nesciunt beatae.
-                                                </p>
-                                                <h5>Features</h5>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                                                    quia,
-                                                    officiis aspernatur ipsum pariatur repellat expedita beatae
-                                                    nobis
-                                                    cum! Libero mollitia blanditiis iste inventore voluptate
-                                                    quibusdam
-                                                    magni obcaecati nesciunt beatae.
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <img src="./img/product-single/tab-desc.jpg" alt="">
-                                            </div>
-                                        </div>
+                                        {!!$product->description!!}
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="tab-2" role="tabpanel">
@@ -295,19 +253,20 @@
                                                 <td class="p-catagory">Customer Rating</td>
                                                 <td>
                                                     <div class="pd-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <span>(5)</span>
+                                                        @for($i = 0; $i <=5;$i++) @if($i <=$product->avgRating)
+                                                            <i class="fa fa-star"></i>
+                                                            @else
+                                                            <i class="fa fa-star-o"></i>
+                                                            @endif
+                                                            @endfor
+                                                            <span>({{count($product->productComments)}})</span>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="p-catagory">Price</td>
                                                 <td>
-                                                    <div class="p-price">$495.00</div>
+                                                    <div class="p-price">${{$product->price}}</div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -319,19 +278,22 @@
                                             <tr>
                                                 <td class="p-catagory">Availability</td>
                                                 <td>
-                                                    <div class="p-stock">22 in stock</div>
+                                                    <div class="p-stock">{{$product->qty}} in stock</div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="p-catagory">Weight</td>
                                                 <td>
-                                                    <div class="p-weight">1,3kg</div>
+                                                    <div class="p-weight">{{$product->weight}}kg</div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="p-catagory">Size</td>
                                                 <td>
-                                                    <div class="p-size">Xxl</div>
+                                                    <div class="p-size">
+                                                        @foreach(array_unique(array_column($product->productDetails->toArray(),'size')) as $productSize){{$productSize}}
+                                                        @endforeach
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>

@@ -286,6 +286,7 @@ ol {
 
 .ht-right .lan-selector .ddcommon .ddTitle .ddTitleText img {
 	padding-right: 5px;
+	height: 14px;
 }
 
 .ht-right .lan-selector .ddcommon .ddTitle .ddTitleText span {
@@ -325,6 +326,8 @@ ol {
 
 .ht-right .lan-selector .ddcommon .ddChild ul li img {
 	padding-right: 10px;
+	height: 14px;
+	width: 30%;
 }
 
 .ht-right .lan-selector .ddcommon .ddChild ul li span {
@@ -430,7 +433,7 @@ ol {
 }
 
 .inner-header .advanced-search .category-btn {
-	max-width: 30%;
+	max-width: 40%;
 	float: left;
 	background: transparent;
 	border: none;
@@ -464,7 +467,7 @@ ol {
 }
 
 .inner-header .advanced-search .input-group {
-	max-width: 70%;
+	max-width: 60%;
 	height: 100%;
 }
 
@@ -481,7 +484,7 @@ ol {
 	font-size: 16px;
 	color: #ffffff;
 	position: absolute;
-	right: -3px;
+	right: 0;
 	top: -1px;
 	border: 1px solid #e7ab3c;
 	background: #e7ab3c;
@@ -3891,7 +3894,7 @@ ol {
 
 @media only screen and (min-width: 1200px) and (max-width: 1920px) {
 	.inner-header .advanced-search .input-group button {
-		right: -14px;
+		right: -55px;
 	}
 	.product-item .pi-pic ul li a {
 		padding: 16px 12px 12px 11px;
