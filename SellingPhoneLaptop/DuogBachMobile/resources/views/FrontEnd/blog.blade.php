@@ -49,8 +49,7 @@
                     <a href="./login.html" class="login-panel"><i class="fa fa-user"></i> Login</a>
                     <div class="lan-selector">
                         <select name="countries" id="countries" class="language_drop" style="width: 300px;">
-                            <option data-image="img/flag-1.png" data-imagecss="flag yt" data-title="Vietnamese"
-                                value="yv">
+                            <option data-image="img/flag-1.png" data-imagecss="flag yt" data-title="Vietnamese" value="yv">
                                 Vietnam</option>
                             <option data-image="img/flag-2.jpg" data-imagecss="flag yu" data-title="German" value="ye">
                                 English</option>
@@ -493,9 +492,10 @@
                     <div class="col-lg-12">
                         <div class="copyright-text">
                             Copyright ©
-                            <script>document.write(new Date().getFullYear())</script> All rights reserved | This
-                            template made width <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="https://www.facebook.com/duogbachdev" target="_blank">DuogBachDev</a>
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> All rights reserved | This
+                            template made width <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/duogbachdev" target="_blank">DuogBachDev</a>
                         </div>
 
                         <div class="payment-pic">

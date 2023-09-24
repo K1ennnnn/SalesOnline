@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Chỉnh sửa thương hiệu sản phẩm')
+@section('title', 'Chỉnh sửa chi tiết sản phẩm')
 
 @section('body')
 
@@ -13,7 +13,7 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    Brand
+                    Product deatil
                     <div class="page-title-subheading">
                         View, create, update, delete and manage.
                     </div>
@@ -27,10 +27,32 @@
             <div class="main-card mb-3 card">
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
+
                         <div class="position-relative row form-group">
-                            <label for="name" class="col-md-3 text-md-right col-form-label">Name</label>
+                            <label class="col-md-3 text-md-right col-form-label">Product Name</label>
                             <div class="col-md-9 col-xl-8">
-                                <input required name="name" id="name" placeholder="Name" type="text" class="form-control" value="Calvin Klein">
+                                <input disabled placeholder="Product Name" type="text" class="form-control" value="Calvin Klein">
+                            </div>
+                        </div>
+
+                        <div class="position-relative row form-group">
+                            <label for="color" class="col-md-3 text-md-right col-form-label">Color</label>
+                            <div class="col-md-9 col-xl-8">
+                                <input required name="color" id="color" placeholder="Color" type="text" class="form-control" value="">
+                            </div>
+                        </div>
+
+                        <div class="position-relative row form-group">
+                            <label for="size" class="col-md-3 text-md-right col-form-label">Size</label>
+                            <div class="col-md-9 col-xl-8">
+                                <input required name="size" id="size" placeholder="Size" type="text" class="form-control" value="">
+                            </div>
+                        </div>
+
+                        <div class="position-relative row form-group">
+                            <label for="qty" class="col-md-3 text-md-right col-form-label">Qty</label>
+                            <div class="col-md-9 col-xl-8">
+                                <input required name="qty" id="qty" placeholder="Qty" type="text" class="form-control" value="">
                             </div>
                         </div>
 
