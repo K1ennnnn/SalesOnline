@@ -16,7 +16,7 @@
                     <div>
                         Product
                         <div class="page-title-subheading">
-                            View, create, update, delete and manage.
+                            View, create, update, delete and manager.
                         </div>
                     </div>
                 </div>
