@@ -83,7 +83,7 @@
                                     </div>
                                 </td>
                                 <td class="text-center">
-                                    Ton That Thuyet, Ha Noi - Ha Noi
+                                    DuogBach
                                 </td>
                                 <td class="text-center">$599.00</td>
                                 <td class="text-center">
