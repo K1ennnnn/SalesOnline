@@ -58,7 +58,7 @@
                         <div class="position-relative row form-group">
                             <label for="brand_id" class="col-md-3 text-md-right col-form-label">Brand</label>
                             <div class="col-md-9 col-xl-8">
-                                <p>Calvin Klein</p>
+                                <p>Duogbach</p>
                             </div>
                         </div>
 
