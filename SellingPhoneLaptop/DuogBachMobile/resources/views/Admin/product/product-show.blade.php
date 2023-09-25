@@ -72,7 +72,7 @@
                         <div class="position-relative row form-group">
                             <label for="name" class="col-md-3 text-md-right col-form-label">Name</label>
                             <div class="col-md-9 col-xl-8">
-                                <p>Pure Pineapple</p>
+                                <p>DuogBachDev</p>
                             </div>
                         </div>
 
